@@ -66,27 +66,27 @@
 	    {
 	        $array_params = array(
 	            array(
-	                'name'    => 'CknIdPublicacion',
+	                'name'    => 'P_nIdPublicacion',
 	                'value'   => $this->getNIdRow(),
 	                'type'    => 'i'
 	            ),
 	            array(
-	                'name'    => 'CknIdUsuario',
+	                'name'    => 'P_nIdUsuario',
 	                'value'   => $this->nIdUsuario,
 	                'type'    => 'i'
 	            ),            
 	            array(
-	                'name'    => 'CksTitulo',
+	                'name'    => 'P_sTitulo',
 	                'value'   => $this->sTitulo,
 	                'type'    => 's'
 	            ),	            
 	            array(
-	                'name'    => 'CksDescripcion',
+	                'name'    => 'P_sDescripcion',
 	                'value'   => $this->sDescripcion,
 	                'type'    => 's'
 				),
 				array(
-	                'name'    => 'CkbEstatus',
+	                'name'    => 'P_bEstatus',
 	                'value'   => $this->getBEstatus(),
 	                'type'    => 'i'
 	            )
