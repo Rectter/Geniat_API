@@ -1,0 +1,59 @@
+endPoint 1 -> http://localhost:8082/Geniat_API/controller/Usuario/registrarUsuario.php
+Method -> POST
+Bearer Token -> required
+eg request ->
+{
+    "Correo" : "jose@gmail.com",
+    "Password" : "Geniat123",
+    "Nombre" : "Jose",
+    "ApellidoPaterno" : "Perez",
+    "ApellidoMaterno" : "Leon",
+    "Rol" : "1"
+}
+
+
+endPoint 2 -> http://localhost:8082/Geniat_API/controller/Usuario/Login.php
+Method -> GET
+Bearer Token -> No required
+eg request ->
+{
+    "Correo" :"rcuamatzi@gmail.com",
+    "Password" : "Geniat123"
+}
+
+
+endPoint 3 -> http://localhost:8082/Geniat_API/controller/Publicacion/registrarPublicacion.php
+Method -> POST
+Bearer Token -> required
+eg request ->
+{
+    "Titulo" : "La historia del loco",
+    "Descripcion" : "publicación de Jhon Katzenbach"
+}
+
+
+endPoint 4 -> http://localhost:8082/Geniat_API/controller/Publicacion/actualizarPublicacion.php
+Method -> PUT
+Bearer Token -> required
+eg request ->
+{
+    "IdPublicacion" : "3",
+    "Titulo" : "La historia del loco",
+    "Descripcion" : "publicación de Jhon Katzenbach"
+}
+
+endPoint 5 -> http://localhost:8082/Geniat_API/controller/Publicacion/eliminarPublicacion.php
+Method -> DELETE
+Bearer Token -> required
+eg request ->
+{
+    "IdPublicacion" : "3"
+}
+
+
+endPoint 6 -> http://localhost:8082/Geniat_API/controller/Publicacion/getPublicaciones.php
+Method -> GET
+Bearer Token -> required
+eg request -> {}
+
+
