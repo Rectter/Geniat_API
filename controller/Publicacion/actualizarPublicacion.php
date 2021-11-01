@@ -3,7 +3,7 @@
     include $_SERVER['DOCUMENT_ROOT']."/Geniat_API/inc/config.inc.php";
     require_once $_SERVER['DOCUMENT_ROOT']."/Geniat_API/vendor/autoload.php";
     
-    validateContent($json_decoded);
+    validateContent('PUT',$json_decoded);
 
     $oAuthJWT = new AuthJWT();
     $bearerToken = getBearerToken();

@@ -3,7 +3,7 @@
     include $_SERVER['DOCUMENT_ROOT']."/Geniat_API/inc/config.inc.php";
     require_once $_SERVER['DOCUMENT_ROOT']."/Geniat_API/vendor/autoload.php";
     
-    validateContent($json_decoded);
+    validateContent('GET',$json_decoded);
     
     $oUsuario = new Dat_Usuario();
     $oUsuario->setORdb($oRdb);

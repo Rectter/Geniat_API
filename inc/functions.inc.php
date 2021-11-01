@@ -55,8 +55,12 @@
     }
 
 
-    function validateContent(&$json_decoded){
-        
+    function validateContent($method ='', &$json_decoded){
+        if($_SERVER['REQUEST_METHOD'] != $method){
+            echo json_encode(array('nCode'=>405,
+                            'sMessage'=> 'HTTP/1.1 405 Accion Not Allowed. Se espera '.$method.' en el Metodo'));
+            exit();
+        }
         $MGeneral['Content_typeInvalid'] = "";
         $content_type = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : null;
         $content_type = strcasecmp($content_type, 'application/json') != 0 ? 'Se espera content_type: application/json' : null;
